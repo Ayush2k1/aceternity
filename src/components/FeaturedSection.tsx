@@ -15,8 +15,11 @@ export function FeaturedSection() {
           <h1 className="text-5xl">Learn with the best</h1>
         </div>
         <div className="grid grid-cols-3 gap-5">
-          {featuredCourses.map((course) => (
-            <BackgroundGradient className="h-full rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900 col-span-1">
+          {featuredCourses.map((course, idx) => (
+            <BackgroundGradient
+              key={idx}
+              className="h-full rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900 col-span-1"
+            >
               <div className="flex flex-col justify-between h-full">
                 <div className="text-center">
                   <h3 className="text-xl mb-4">{course.title}</h3>
